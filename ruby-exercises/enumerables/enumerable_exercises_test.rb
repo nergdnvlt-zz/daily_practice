@@ -103,18 +103,10 @@ class EnumerablesTest < Minitest::Test
     assert true, actual
   end
 
-  def test_one_time
-    skip
-    words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
-    actual = # Your code goes here
-    assert_equal true, actual
-  end
-
   def test_sum_a_list_of_numbers
-    skip
     numbers = [32, 1, 21, 5, 81, 333]
     # initial value is 0
-    actual = # Your code here
+    actual = numbers.reduce(:+)
     assert_equal 473, actual
   end
 
