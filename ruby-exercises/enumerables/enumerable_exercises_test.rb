@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'pry'
 
 class EnumerablesTest < Minitest::Test
   def test_squares
@@ -87,9 +88,8 @@ class EnumerablesTest < Minitest::Test
   end
 
   def test_group_words_by_first_letter
-    skip
     words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column"]
-    # Your Code Here
+    actual = words.group_by { |word| word[0] }
     expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
     assert_equal expected, actual
   end
