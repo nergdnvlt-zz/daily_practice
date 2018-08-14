@@ -95,9 +95,11 @@ class EnumerablesTest < Minitest::Test
   end
 
   def test_none_are_negative
-    skip
     numbers = [9, 3, 1, 8, 3, 3, 5]
-    # Your Code Here
+    actual = true
+    numbers.each do |num|
+      return actual = false if num >= 0
+    end
     assert true, actual
   end
 
